@@ -1,0 +1,23 @@
+ALGORITHM Count_Text
+VAR
+   c: CHAR := '';
+   nbr_char : INTEGER := 0;
+   nbr_word : INTEGER := 0;
+   nbr_vow : INTEGER := 0 ;
+BEGIN
+    WHILE (c <> '.') DO
+        Read (c);
+        nbr_char := nbr_char +1;
+        IF (c = 'a' OR c = 'e' OR c = 'u' OR c = 'i' OR c = o OR c ='y' OR c = 'A' OR c = 'E' OR c = 'U' OR c = 'I' OR c = O OR c ='Y' ) THEN
+            nbr_vow := nbr_vow +1;
+        END_IF
+        
+        IF (c =' ') THEN
+            nbr_word := nbr_word+1;
+        END_IF
+    END_WHILE
+
+    Write("The length of the sentence is ",nbr_char);
+    Write("The number of words in the sentence is ",nbr_word+1);
+    Write("he number of vowels in the sentence. is ",nbr_vow);
+END
